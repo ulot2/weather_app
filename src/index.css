@@ -1,13 +1,102 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.app:before {
+  content: "";
+  background: url("./images/sunset.jpg") no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.search {
+  text-align: center;
+  padding: 1rem;
+}
+
+.search input {
+  padding: .7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  outline: none;
+  color: #f8f8f8;
+}
+
+::placeholder {
+  color: #f8f8f8;
+}
+
+.container {
+  max-width: 700px;
+  height: 600px;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+}
+
+.container .okay {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.description {
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+}
+
+.app .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.bottom p:last-of-type {
+  font-size: 1rem;
 }
