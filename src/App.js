@@ -6,7 +6,7 @@ function App() {
   const [location, setLocation] = useState("");
   const [loading, setLoading] = useState(false); // New state variable for loading
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=b578c12a7c0d381305eef1d5bfc8a80b`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=b578c12a7c0d381305eef1d5bfc8a80b`;
 
   const searchLocation = (event) => {
     if (event.key === "Enter") {
@@ -40,7 +40,7 @@ function App() {
                 <p>{data.name}</p>
               </div>
               <div className="temp">
-                {data.main ? <h1>{data.main.temp.toFixed()}°F</h1> : null}
+                {data.main ? <h1>{data.main.temp.toFixed()}°C</h1> : null}
               </div>
               <div className="description">
                 {data.weather ? <p>{data.weather[0].main}</p> : null}
@@ -50,7 +50,7 @@ function App() {
               <div className="bottom">
                 <div className="feels">
                   {data.main ? (
-                    <p className="bold">{data.main.feels_like.toFixed()}°F</p>
+                    <p className="bold">{data.main.feels_like.toFixed()}°C</p>
                   ) : null}
                   <p>Feels like</p>
                 </div>
@@ -62,7 +62,7 @@ function App() {
                 </div>
                 <div className="wind">
                   {data.wind ? (
-                    <p className="wind">{data.wind.speed.toFixed()} MPH</p>
+                    <p className="wind">{data.wind.speed.toFixed()} MPS</p>
                   ) : null}
                   <p>Wind speed</p>
                 </div>
